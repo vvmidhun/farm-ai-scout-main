@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #fff6e8;
+  --color-peach: #ffe8c2;
+  --color-gold: #f0a020;
+  --color-gold-soft: #ffc24b;
+  --color-good: #34d399;
+  --color-bad: #ef6461;
+  --color-sky: #cfe8ff;
+  --color-navy: #0f2748;
+  --color-bot: #5b8def;
+  --color-bot-ink: #1e3a6e;
+  --color-pad: #f4d7a0;
+  --color-earth: #8b5a2b;
+  --color-crop: #6fb94d;
+  --color-drought: #d98a3a;
+  --color-monsoon: #6fb94d;
+  --color-rain: #5b8def;
+  --shadow-toy: 0 6px 0 rgb(0 0 0 / 0.1), 0 10px 20px rgb(0 0 0 / 0.12);
+  --font-display: "Baloo 2", system-ui, sans-serif;
+  --font-sans: "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-cream);
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+button {
+  font: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes home-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-enter {
+  animation: home-enter 0.35s ease-out both;
+}
+
+@keyframes hint-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+.hint-pulse {
+  animation: hint-pulse 0.9s ease-in-out infinite;
+}
+
+@keyframes tray-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-6px);
+  }
+  75% {
+    transform: translateX(6px);
+  }
+}
+
+.tray-shake {
+  animation: tray-shake 0.35s ease-in-out;
+}
+
+@keyframes map-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 4px rgb(255 194 75 / 0.55), 0 0 24px 6px rgb(255 194 75 / 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgb(255 194 75 / 0.2), 0 0 34px 10px rgb(255 194 75 / 0.5);
+  }
+}
+
+.map-glow {
+  animation: map-glow 1.6s ease-in-out infinite;
+}
+
+@keyframes stamp-pop {
+  0% {
+    transform: scale(0.2) rotate(-30deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.25) rotate(8deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.stamp-pop {
+  animation: stamp-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes machine-whirl {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.machine-whirl {
+  animation: machine-whirl 1.2s linear infinite;
+}
+
+@keyframes cloud-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.cloud-bob {
+  animation: cloud-bob 2.4s ease-in-out infinite;
+}
+
+@keyframes celebrate-pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.celebrate-pop {
+  animation: celebrate-pop 0.5s ease-out both;
+}
