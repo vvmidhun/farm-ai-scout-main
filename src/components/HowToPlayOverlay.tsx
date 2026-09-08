@@ -53,7 +53,7 @@ export function HowToPlayOverlay({ onClose, onStart, onPrefetchPlay }: HowToPlay
           <ChunkyButton variant="ghost" onClick={onClose}>
             Back
           </ChunkyButton>
-          <ChunkyButton variant="primary" size="lg" onClick={onStart} onPointerDown={onPrefetchPlay}>
+          <ChunkyButton variant="primary" size="sm" onClick={onStart} onPointerDown={onPrefetchPlay}>
             Got it — start!
           </ChunkyButton>
         </div>
